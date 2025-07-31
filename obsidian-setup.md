@@ -35,8 +35,9 @@ Step 2. Make the AppImage Executable
 	Check the box: “Allow executing file as program”.
 	Close the window and double-click the file to run Obsidian.
 
--Using Terminal
-     If you prefer the terminal:
+- Using Terminal
+
+    If you prefer the terminal:
 	cd ~/Downloads  # or wherever you saved the file
 	chmod +x Obsidian-*.AppImage
 	./Obsidian-*.AppImage
