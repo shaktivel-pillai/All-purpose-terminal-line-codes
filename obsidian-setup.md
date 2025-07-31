@@ -10,7 +10,7 @@
 
 **Note**: This guide is based on personal experience setting up Obsidian on Ubuntu without sudo access.
 
-## What is Obsidian?
+### What is Obsidian?
 **Obsidian**  is a powerful note-taking and knowledge management app designed for researchers, writers, and thinkers. It uses **Markdown files** stored locally and allows you to create a network of linked ideas.
 ### Key Features
 - Markdown-based notes (`.md`)
