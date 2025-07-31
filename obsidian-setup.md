@@ -1,83 +1,93 @@
-**Author**: Shaktivel Shankar Pillai (shp40)  
 
-**Role**: PhD Researcher in Solar Physics  
-
-**Affiliation**: Aberystwyth University, FBAPS
-
-**GitHub**: https://github.com/shp40  
-
-**ORCID**: https://orcid.org/0000-0000-0000-0000  
-
-**Note**: This guide is based on personal experience setting up Obsidian on Ubuntu without sudo access.
-
-### What is Obsidian?
-**Obsidian**  is a powerful note-taking and knowledge management app designed for researchers, writers, and thinkers. It uses **Markdown files** stored locally and allows you to create a network of linked ideas.
-### Key Features
-- Markdown-based notes (`.md`)
-- Local-first (no cloud required)
-- Bi-directional linking (`[[note name]]`)
-- Graph view of connected notes
-- Plugin support (e.g., LaTeX, Zotero)
-- Vaults for organizing workspaces
+***Author:***&nbsp;&nbsp;&nbsp;Shaktivel Shankar Pillai (shp40)  
+**Role:**   PhD Researcher in Solar Physics  
+**Affiliation:**   Aberystwyth University, FBAPS  
+**GitHub:**   shaktivel-pillai  
+**Note:**   Based on experience setting up Obsidian on Ubuntu without sudo access
 
 
-### **Steps to Run Obsidian on Ubuntu Without sudo**
 
-Step 1. Download the AppImage
+# What is Obsidian?
 
-Go to: https://obsidian.md/download
-Choose Linux (AppImage) and download it to your Downloads or Documents folder.
+**Obsidian** is a powerful, Markdown-based note-taking and knowledge management app tailored for researchers, writers, and thinkers. It allows you to build a network of linked ideas using plain-text files stored locally.
 
-Step 2. Make the AppImage Executable
-- Using File Manager
-	Right-click the .AppImage file.
-	Go to Properties → Permissions tab.
-	Check the box: “Allow executing file as program”.
-	Close the window and double-click the file to run Obsidian.
+## Key Features
 
-- Using Terminal
+- Uses `.md` (Markdown) files  
+- Local-first (no cloud required)  
+- Bi-directional linking (`[[note name]]`)  
+- Graph view of connected notes  
+- Plugin support (e.g., LaTeX, Zotero)  
+- Vaults for organizing workspaces  
 
-    If you prefer the terminal:
-	cd ~/Downloads  # or wherever you saved the file
-	chmod +x Obsidian-*.AppImage
-	./Obsidian-*.AppImage
+---
 
-Step 3. If you get an error when you try to run the appimage stating 
-	AppImage 
-	dlopen(): error loading libfuse.so.2
-     This means AppImages require FUSE to run. 
+# How to Run Obsidian on Ubuntu Without `sudo`
 
-Step 4. If error then do below:
-Steps to Extract the AppImage (if FUSE is not available)
+## Step 1: Download the AppImage
 
- - Open a terminal and navigate to the folder:
-	cd ~/Downloads
+- Visit: [https://obsidian.md/download](https://obsidian.mdppImage)** and download it to your `Downloads` or `Documents` folder.
 
-- Extract the AppImage:
-	./Obsidian-*.AppImage --appimage-extract
+## Step 2: Make the AppImage Executable
 
-- This creates a folder called squashfs-root.
+#### Option A: Using File Manager
 
-- Run Obsidian:
-	./squashfs-root/AppRun
+1. Right-click the `.AppImage` file.  
+2. Go to **Properties → Permissions**.  
+3. Check **“Allow executing file as program”**.  
+4. Close the window and double-click the file to launch Obsidian.
+
+#### Option B: Using Terminal
+
+```bash
+cd ~/Downloads  # or the folder where you saved the file
+chmod +x Obsidian-*.AppImage
+./Obsidian-*.AppImage
+```
+
+## **Step 3: If You Encounter a FUSE Error**
+
+If you see:
+```bash
+AppImage
+dlopen(): error loading libfuse.so.2
+```
+*This means your system lacks FUSE, which AppImages require.*
+
+## Step 4: Extract the AppImage (No FUSE Required)
+```bash
+cd ~/Downloads
+./Obsidian-*.AppImage --appimage-extract
+```
+- This creates a folder named squashfs-root.  
+Run Obsidian with:
+```bash
+./squashfs-root/AppRun
+```
+## Step 5: Create a Desktop Shortcut (No sudo)
+```bash
+nano ~/.local/share/applications/obsidian.desktop
+```
+- Paste the following content (update paths as needed):
+```bash
+  [Desktop Entry]
+Name=Obsidian
+Exec=/home/yourusername/Downloads/squashfs-root/AppRun
+Icon=/home/yourusername/Downloads/squashfs-root/obsidian.png
+Type=Application
+Categories=Utility;
+Terminal=false
+```
+Save and exit:  
+ - Press Ctrl + O, then Enter to save.
+ - Press Ctrl + X to exit.
+
+## Step 6: Make it executable: 
+```bash
+chmod +x ~/.local/share/applications/obsidian.desktop
+```
+## *You should now see Obsidian in your application launcher.*
 
 
-5. How to Create a Desktop Shortcut (No sudo)
-- Open a terminal and run:
-	nano ~/.local/share/applications/obsidian.desktop
 
-- Paste the following content (update the paths as needed):
-	[Desktop Entry]
-	Name=Obsidian
-	Exec=/home/yourusername/Downloads/squashfs-root/AppRun
-	Icon=/home/yourusername/Downloads/squashfs-root/obsidian.png
-	Type=Application
-	Categories=Utility;
-	Terminal=false
 
-	Save and exit (Ctrl + O, Enter, then Ctrl + X).
-
-- Make it executable:
-	chmod +x ~/.local/share/applications/obsidian.desktop
-
-**You should now see Obsidian in your application launcher.**
