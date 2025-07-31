@@ -1,12 +1,3 @@
-
-***Author:***&nbsp;&nbsp;&nbsp;Shaktivel Shankar Pillai (shp40)  
-**Role:**   PhD Researcher in Solar Physics  
-**Affiliation:**   Aberystwyth University, FBAPS  
-**GitHub:**   shaktivel-pillai  
-**Note:**   Based on experience setting up Obsidian on Ubuntu without sudo access
-
-
-
 # What is Obsidian?
 
 **Obsidian** is a powerful, Markdown-based note-taking and knowledge management app tailored for researchers, writers, and thinkers. It allows you to build a network of linked ideas using plain-text files stored locally.
