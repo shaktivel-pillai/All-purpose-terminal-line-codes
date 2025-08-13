@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "obsidian-setup.md",
-                "mode": "source",
-                "source": false
+                "file": "Obsidian-setup.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "obsidian-setup"
+              "title": "Obsidian-setup"
+            }
+          },
+          {
+            "id": "5357dc712ca4d89d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "rsync protocols.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "rsync protocols"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -74,8 +89,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -169,11 +183,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "833e7cf3d604f04a",
+  "active": "5357dc712ca4d89d",
   "lastOpenFiles": [
     "How to use git to commit.md",
-    "obsidian-setup.md",
-    "Welcome.md",
-    "Untitled"
+    "rsync protocols.md",
+    "Obsidian-setup.md",
+    "Python Scripts/Interactive Shell within python script.md",
+    "Python Scripts",
+    "Welcome.md"
   ]
 }
