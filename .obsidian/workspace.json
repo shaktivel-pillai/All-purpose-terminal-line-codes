@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "rsync protocols.md",
+                "file": "How to use git to commit.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "rsync protocols"
+              "title": "How to use git to commit"
             }
           }
         ],
@@ -185,8 +185,10 @@
   },
   "active": "5357dc712ca4d89d",
   "lastOpenFiles": [
-    "How to use git to commit.md",
     "rsync protocols.md",
+    "README.md",
+    "ABOUT",
+    "How to use git to commit.md",
     "Obsidian-setup.md",
     "Python Scripts/Interactive Shell within python script.md",
     "Python Scripts",
